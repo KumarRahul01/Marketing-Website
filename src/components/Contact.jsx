@@ -90,14 +90,14 @@ const Contact = () => {
         </div>
 
         {/* form */}
-        <div data-aos="fade-up" className="lg:w-[60%] px-10 py-5 shadow-xl border-t-[3px] border-b-[3px] border-orange-600">
+        <div data-aos="fade-up" data-aos-duration="1600" className="lg:w-[60%] px-10 py-5 shadow-xl border-t-[3px] border-b-[3px] border-orange-600">
           <form>
             <div className="md:flex gap-6">
               <div className="md:w-[50%]">
                 <div>
                   <h2>Name:</h2>
                   <input
-                    type="text"
+                    type="text" placeholder="John Doe"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
                 </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                 <div>
                   <h2>Your Email:</h2>
                   <input
-                    type="text"
+                    type="text" placeholder="johndoe@gmail.com"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
                 </div>
@@ -117,14 +117,14 @@ const Contact = () => {
             <div>
               <h2>Subject</h2>
               <input
-                type="text"
+                type="text" placeholder="Your subject"
                 className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
               />
             </div>
 
             <div>
               <h2>Message</h2>
-              <textarea className="w-full h-60 p-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none resize-none"></textarea>
+              <textarea placeholder="Enter your message" className="w-full h-60 p-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none resize-none"></textarea>
             </div>
 
             <div className="flex justify-center m-3">

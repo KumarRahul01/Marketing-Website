@@ -19,25 +19,32 @@ const NavBar = () => {
       {/* menu */}
       <div className="lg:flex items-center justify-between lg:gap-14 hidden">
         <a
-          href="#"
+          href="/"
           className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
         >
           Home
         </a>
         <a
-          href="#"
+          href="#about"
           className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
         >
           About
         </a>
         <a
-          href="#"
+          href="#services"
           className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
         >
           Services
         </a>
         <a
-          href="#"
+          href="#portfolio"
+          className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
+        >
+          Portfolio
+        </a>
+
+        <a
+          href="#contact"
           className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
         >
           Contact

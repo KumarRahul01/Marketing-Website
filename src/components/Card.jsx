@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ title, desc, img }) => {
   return (
-    <div className="bg-white lg:min-w-3/12 h-fit p-10 shadow-md rounded mx-5 lg:m-0 hover:text-orange-600 hover:-translate-y-10 transition-all duration-700">
+    <div className="bg-white lg:min-w-3/12 h-fit p-10 shadow-md rounded mx-5 lg:m-0 hover:text-orange-600 lg:hover:-translate-y-10 transition-all duration-700">
       <div style={{ color: "#EA580C", fontSize: "36px" }}>
         {img}
       </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Faquestions from "./Faquestions";
 
 const FreqAskedQues = () => {
 
@@ -25,7 +26,9 @@ const FreqAskedQues = () => {
       </p>
 
       {/* Accordian */}
-      <div></div>
+      <div data-aos="fade-right">
+        <Faquestions />
+      </div>
     </div>
   );
 };

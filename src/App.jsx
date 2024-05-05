@@ -18,13 +18,13 @@ const App = () => {
       <section className="w-full max-h-fit pt-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
         <Hero />
       </section>
-      <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
+      <section id="about" className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
         <HeroReverse />
       </section>
-      <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
+      <section id="services" className="w-full max-h-fit py-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
         <Services />
       </section>
-      <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
+      <section id="portfolio" className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
         <Portfolio />
       </section>
       <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
@@ -36,7 +36,7 @@ const App = () => {
       <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
         <Clients />
       </section>
-      <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
+      <section id="contact" className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
         <Conatact />
       </section>
       <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
