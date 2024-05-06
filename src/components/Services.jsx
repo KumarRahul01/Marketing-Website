@@ -7,7 +7,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Services = () => {
-
   useEffect(() => {
     AOS.init();
   });
@@ -20,11 +19,14 @@ const Services = () => {
       <div className="flex justify-center items-center mt-2">
         <div className="bg-orange-600 h-1 w-16 rounded"></div>
       </div>
-      <p className="text-gray-700 text-center mt-7 mb-10">
-        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-        consectetur velit
+      <p className="text-gray-700 text-center mt-7 mb-10 text-lg">
+        Choose from live online courses, classroom training, or self-paced
+        online programs.
       </p>
-      <div className="flex flex-col lg:flex-row items-center gap-5" data-aos="fade-up">
+      <div
+        className="flex flex-col lg:flex-row items-center gap-5"
+        data-aos="fade-up"
+      >
         <Card
           img={<HiOutlineChartPie />}
           title={"Setup UI Project"}

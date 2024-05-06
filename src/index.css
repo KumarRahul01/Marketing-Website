@@ -1,52 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+/* Important */
 
-:root{
+:root {
   --primary-font: "Open Sans", sans-serif;
   --secondary-font: "Poppins", sans-serif;
 }
 
-.primary-font{
+.primary-font {
   font-family: var(--primary-font);
 }
 
-.secondary-font{
+.secondary-font {
   font-family: var(--secondary-font);
 }
 
+/* Custom Scrollbar */
 
-/* .animate{
-  animation-name: topBottom;
-  animation-duration: 1.8s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse
-} */
+body::-webkit-scrollbar {
+  width: 8px;
+}
 
-/* @keyframes topBottom {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(5%);
-  }
-} */
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #EA580C;
+  border-radius: 10px;
+}
 
 /* custom arrow */
 
-.arrow:before{
+.arrow:before {
   content: "👉";
   padding-right: 5px;
-
 }
-

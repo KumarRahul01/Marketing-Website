@@ -8,7 +8,7 @@ import { BsPeople } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HeroReverse = () => {
+const About = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -17,7 +17,10 @@ const HeroReverse = () => {
 
   return (
     <div>
-      <h1 data-aos="fade-down" className="text-3xl font-semibold text-center text-[#7A6960]">
+      <h1
+        data-aos="fade-down"
+        className="text-3xl font-semibold text-center text-[#7A6960]"
+      >
         About Us
       </h1>
       <div className="flex justify-center items-center mt-2 mb-10">
@@ -34,11 +37,11 @@ const HeroReverse = () => {
         <div className="lg:w-1/2 w-full md:w-3/4 px-10 md:p-0">
           <div data-aos="fade-left">
             <h1 className="text-[#7A6960] md:text-3xl font-semibold">
-              Voluptatem dignissimos provident quasi assumenda.
+              Upskilling Edtech
             </h1>
             <p className="text-lg mt-5 text-gray-600 primary-font">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Edtech platform offering expert mentorship with our
+              tech-powered courses in various languages of India.
             </p>
           </div>
 
@@ -53,13 +56,12 @@ const HeroReverse = () => {
             >
               <BsPeople size={"28px"} />
             </div>
-            <div>
+            <div className="w-full">
               <h2 className="text-[#7A6960] text-xl font-medium">
-                Ullamco laboris nisi ut aliquip consequat
+                The Vernacular Upskilling Edtech
               </h2>
               <p className="text-base text-gray-600 primary-font lg:mt-1 mt-2">
-                Magni facilis facilis repellendus cum excepturi quaerat
-                praesentium libre trade
+                Explore Our Courses | Bharat ka Career Launchpad
               </p>
             </div>
           </div>
@@ -75,27 +77,24 @@ const HeroReverse = () => {
             >
               <BsPeople size={"28px"} />
             </div>
-            <div>
+            <div className="w-full">
               <h2 className="text-[#7A6960] text-xl font-medium">
-                Ullamco laboris nisi ut aliquip consequat
+                Build Your Career, Your Way
               </h2>
               <p className="text-base text-gray-600 primary-font lg:mt-1 mt-2">
-                Magni facilis facilis repellendus cum excepturi quaerat
-                praesentium libre trade
+                Our Learners Work at Global Companies & Startups
               </p>
             </div>
           </div>
 
           {/* para */}
           <p
-            data-aos="fade-left"
+            data-aos="zoom-in"
             className="text-lg mt-5 text-gray-600 primary-font"
           >
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum
+            Master industry-relevant skills with our vernacular online courses.
+            Choose your program, get certified, and open doors to lucrative
+            career opportunities.
           </p>
           <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
             <CtaButton name={"Get Started"} />
@@ -107,4 +106,4 @@ const HeroReverse = () => {
   );
 };
 
-export default HeroReverse;
+export default About;

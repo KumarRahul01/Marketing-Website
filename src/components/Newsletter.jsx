@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// aos
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Newsletter = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
+
+
   return (
-    <div className="text-[#7A6960]">
+    <div data-aos="fade-down" className="text-[#7A6960]">
       <h1 className="text-3xl font-semibold text-center">
         Join Our Newsletter
       </h1>
@@ -17,7 +29,7 @@ const Newsletter = () => {
       {/* form */}
       <form className="w-full flex flex-col md:flex-row justify-center items-center gap-3">
         <input type="email" placeholder="email@gmail.com" className="md:w-1/2 w-11/12 px-6 py-3 rounded-3xl outline-none border border-zinc-300 focus:border-orange-600"/>
-        <button className="px-4 py-3 bg-orange-600 rounded-3xl text-white">Subscribe</button>
+        <button className="px-4 py-[10px] bg-orange-600 hover:bg-orange-500 rounded-3xl text-slate-50 text-lg">Subscribe</button>
       </form>
     </div>
   );

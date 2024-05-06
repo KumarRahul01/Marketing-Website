@@ -51,9 +51,10 @@ const NavBar = () => {
         </a>
 
         {/* CTA */}
-        <button className="bg-orange-600 text-lg text-slate-50 rounded-3xl px-4 py-1">
+        {/* <button className="bg-orange-600 text-lg text-slate-50 rounded-3xl px-4 py-1">
           Get Strated
-        </button>
+        </button> */}
+        <CtaButton name={"Get Started"} />
       </div>
 
       {/* mobile menu */}

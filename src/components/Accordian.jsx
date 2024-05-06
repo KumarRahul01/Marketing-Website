@@ -56,8 +56,8 @@ const Accordian = ({ question, answer }) => {
           </span>
         </button>
         {/* answer */}
-        <div className="grid overflow-hidden transition-all duration-300 ease-in-out text-[#7A6960]">
-          {show ? <p className="px-4 -mt-1 ">{answer}</p> : null}
+        <div className="text-[#7A6960]">
+          {show ? <p className="px-4 pb-2 -mt-1 ">{answer}</p> : null}
         </div>
       </div>
     </>
