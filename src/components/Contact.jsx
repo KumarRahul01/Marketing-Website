@@ -7,8 +7,19 @@ import CtaButton from "./CtaButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Contact = () => {
+// React Form
+import { useForm } from "react-hook-form";
 
+const Contact = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data),
+    name = "",
+    email = "",
+    subject = "",
+    message = ""
+  };
 
   useEffect(() => {
     AOS.init({
@@ -16,21 +27,24 @@ const Contact = () => {
     });
   }, []);
 
-
   return (
     <div className="text-[#7A6960]">
-      <h1 className="text-3xl font-semibold text-center">Contact</h1>
+      <h1 data-aos="fade-right" className="text-3xl font-semibold text-center">
+        Contact
+      </h1>
       <div className="flex justify-center items-center mt-2">
         <div className="bg-orange-600 h-1 w-16 rounded"></div>
       </div>
-      <p className="text-gray-700 text-center mt-7 mb-10">
-        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-        consectetur velit
+      <p className="text-gray-700 text-center mt-7 mb-10 text-lg">
+        Explore our live offline centers | Fill the form to contact us
       </p>
 
       <div className="lg:flex gap-6">
         {/* map */}
-        <div data-aos="fade-up" className="lg:w-[40%] px-10 py-5 shadow-xl border-t-[3px] border-b-[3px] border-orange-600 mb-7 lg:mb-0">
+        <div
+          data-aos="fade-up"
+          className="lg:w-[40%] px-10 py-5 shadow-xl border-t-[3px] border-b-[3px] border-orange-600 mb-7 lg:mb-0"
+        >
           <div className="flex gap-3 mt-3 mb-12">
             <div
               className="rounded-full h-fit bg-orange-100 p-2"
@@ -90,14 +104,20 @@ const Contact = () => {
         </div>
 
         {/* form */}
-        <div data-aos="fade-up" data-aos-duration="1600" className="lg:w-[60%] px-10 py-5 shadow-xl border-t-[3px] border-b-[3px] border-orange-600">
-          <form>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          className="lg:w-[60%] px-10 py-5 shadow-xl border-t-[3px] border-b-[3px] border-orange-600"
+        >
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="md:flex gap-6">
               <div className="md:w-[50%]">
                 <div>
                   <h2>Name:</h2>
                   <input
-                    type="text" placeholder="John Doe"
+                    {...register("name", { required: true })}
+                    type="text"
+                    placeholder="John Doe"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
                 </div>
@@ -107,7 +127,9 @@ const Contact = () => {
                 <div>
                   <h2>Your Email:</h2>
                   <input
-                    type="text" placeholder="johndoe@gmail.com"
+                    {...register("email", { required: true })}
+                    type="text"
+                    placeholder="johndoe@gmail.com"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
                 </div>
@@ -117,14 +139,20 @@ const Contact = () => {
             <div>
               <h2>Subject</h2>
               <input
-                type="text" placeholder="Your subject"
+                {...register("subject", { required: true })}
+                type="text"
+                placeholder="Your subject"
                 className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
               />
             </div>
 
             <div>
               <h2>Message</h2>
-              <textarea placeholder="Enter your message" className="w-full h-60 p-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none resize-none"></textarea>
+              <textarea
+                {...register("message", { required: true })}
+                placeholder="Enter your message"
+                className="w-full h-60 p-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none resize-none"
+              ></textarea>
             </div>
 
             <div className="flex justify-center m-3">

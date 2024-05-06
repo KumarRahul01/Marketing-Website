@@ -26,15 +26,14 @@ const Portfolio = () => {
       <div className="flex justify-center items-center mt-2">
         <div className="bg-orange-600 h-1 w-16 rounded"></div>
       </div>
-      <p className="text-gray-700 text-center mt-7 mb-10">
-        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-        consectetur velit
+      <p className="text-gray-700 text-center mt-7 mb-10 text-lg">
+        Explore Our Live Courses & Make Bharat ka Career Launchpad
       </p>
 
       {/* Images */}
       <div className="flex flex-col lg:-gap-6 gap-3 p-5">
         {/* 1st row */}
-        <div className="flex lg:-gap-6 gap-3">
+        <div data-aos="fade-right" className="flex lg:-gap-6 gap-3">
           <div className="w-[26rem] overflow-hidden">
             <img
               src={app1}
@@ -61,7 +60,7 @@ const Portfolio = () => {
         </div>
 
         {/* 2nd row */}
-        <div className="flex lg:-gap-6 gap-3">
+        <div data-aos="fade-left" className="flex lg:-gap-6 gap-3">
           <div className="w-[26rem] overflow-hidden">
             <img
               src={book1}
@@ -88,7 +87,7 @@ const Portfolio = () => {
         </div>
 
         {/* 3rd row */}
-        <div className="flex lg:-gap-6 gap-3">
+        <div data-aos="fade-up" className="flex lg:-gap-6 gap-3">
           <div className="w-[26rem] overflow-hidden">
             <img
               src={product3}
