@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CtaButton from "./CtaButton";
 import VideoBtn from "./VideoBtn";
 import img from "../img/about-img.svg";
@@ -8,6 +8,9 @@ import { BsPeople } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// import video
+import video from "../img/video/funny.mp4";
+
 const About = () => {
   useEffect(() => {
     AOS.init({
@@ -15,8 +18,14 @@ const About = () => {
     });
   });
 
+  const [show, setShow] = useState(false);
+
+  const clickHandler = () => {
+    setShow(false);
+  };
+
   return (
-    <div>
+    <div className="relative">
       <h1
         data-aos="fade-down"
         className="text-3xl font-semibold text-center text-[#7A6960]"
@@ -40,8 +49,8 @@ const About = () => {
               Upskilling Edtech
             </h1>
             <p className="text-lg mt-5 text-gray-600 primary-font">
-              Edtech platform offering expert mentorship with our
-              tech-powered courses in various languages of India.
+              Edtech platform offering expert mentorship with our tech-powered
+              courses in various languages of India.
             </p>
           </div>
 
@@ -97,8 +106,35 @@ const About = () => {
             career opportunities.
           </p>
           <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
+          <div>
             <CtaButton name={"Get Started"} />
+          </div>
+          <div onClick={()=> setShow(true)} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">
             <VideoBtn name={"Watch Video"} />
+          </div>
+          </div>
+
+          {/* Adding video */}
+
+          <div
+            className={`${
+              show ? "block" : "hidden"
+            } absolute right-0 top-0 lg:w-full lg:h-full bg-zinc-500 bg-opacity-50 rounded overflow-hidden flex justify-center items-center shadow-2xl lg:mb-20 transition-all duration-300`}
+          >
+            <div
+              onClick={() => clickHandler()}
+              className="absolute right-10 top-6 text-3xl font-light bg-zinc-700 px-3 rounded-full text-white cursor-pointer"
+            >
+              x
+            </div>
+            <video
+              id="video"
+              muted
+              controls
+              autoPlay
+              className="w-[800px] rounded"
+              src={video}
+            ></video>
           </div>
         </div>
       </div>
