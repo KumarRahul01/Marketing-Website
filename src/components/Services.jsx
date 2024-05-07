@@ -27,9 +27,17 @@ const Services = () => {
         className="flex flex-col lg:flex-row items-center gap-5"
         data-aos="fade-up"
       >
+          <Card
+            img={<HiOutlineChartPie />}
+            title={"Apps Development"}
+            desc={
+              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+            }
+          />
+
         <Card
           img={<HiOutlineChartPie />}
-          title={"Setup UI Project"}
+          title={"Web Development"}
           desc={
             "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
           }
@@ -37,7 +45,7 @@ const Services = () => {
 
         <Card
           img={<HiOutlineChartPie />}
-          title={"Setup UI Project"}
+          title={"Search Engine Optimization"}
           desc={
             "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
           }
@@ -45,15 +53,7 @@ const Services = () => {
 
         <Card
           img={<HiOutlineChartPie />}
-          title={"Setup UI Project"}
-          desc={
-            "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
-          }
-        />
-
-        <Card
-          img={<HiOutlineChartPie />}
-          title={"Setup UI Project"}
+          title={"Campaign Creation"}
           desc={
             "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
           }

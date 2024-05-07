@@ -8,8 +8,10 @@ import img from "../img/hero-img.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import video 
+// import video
 import video from "../img/video/funny.mp4";
+import NavBar from "./NavBar";
+
 
 const Hero = () => {
   const myElement = useRef(null);
@@ -28,7 +30,13 @@ const Hero = () => {
     AOS.init();
   });
 
-  // const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
+
+  const clickHandler = ()=>{
+    const video = document.querySelector(".video");
+    setShow(false);
+  };
+
 
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center lg:gap-10 secondary-font relative">
@@ -41,11 +49,17 @@ const Hero = () => {
           Fueling Skills, Igniting Careers
         </h1>
         <p className="text-xl mt-5 text-gray-600 primary-font">
-          Master industry-relevant skills with our vernacular online courses. Choose your program, get certified, & open doors to lucrative career opportunities.
+          Master industry-relevant skills with our vernacular online courses.
+          Choose your program, get certified, & open doors to lucrative career
+          opportunities.
         </p>
         <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-          <CtaButton name={"Get Started"} />
-          <VideoBtn name={"Watch Video"} />
+          <div className="">
+            <CtaButton name={"Get Started"} />
+          </div>
+          <div onClick={()=> setShow(true)} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">
+            <VideoBtn name={"Watch Video"} />
+          </div>
         </div>
       </div>
 
@@ -53,12 +67,15 @@ const Hero = () => {
         <img ref={myElement} className="w-full animate" src={img} alt="img" />
       </div>
 
-
       {/* Adding video */}
 
-      {/* <div className={`${show ? "block" : "hidden"} absolute left-52 w-fit bg-red-500 p-10 rounded overflow-hidden`}>
-        <video autoPlay className="w-[800px] rounded shadow-2xl" src={video}></video>
-      </div> */}
+      <div className={`${show ? "block" : "hidden"} absolute lg:w-full lg:h-full bg-zinc-500 bg-opacity-50 rounded overflow-hidden flex justify-center items-center shadow-2xl lg:mb-20 transition-all duration-300`}>
+        <div onClick={()=> clickHandler()} className="absolute right-10 top-6 text-3xl font-light bg-zinc-700 px-3 rounded-full text-white cursor-pointer">
+          x
+        </div>
+        <video id="video" muted controls autoPlay className="w-[800px] rounded" src={video}></video>
+      </div>
+
     </div>
   );
 };
