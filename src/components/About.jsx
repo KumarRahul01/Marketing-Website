@@ -20,7 +20,6 @@ const About = () => {
 
   const [show, setShow] = useState(false);
 
-<<<<<<< HEAD
   const videoStartHandler = ()=>{
     const video = document.querySelector("#video");
     video.currentTime = 0;
@@ -37,14 +36,6 @@ const About = () => {
 
   return (
     <div className="relative lg:mx-32">
-=======
-  const clickHandler = () => {
-    setShow(false);
-  };
-
-  return (
-    <div className="relative">
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
       <h1
         data-aos="fade-down"
         className="text-3xl font-semibold text-center text-[#7A6960]"
@@ -124,7 +115,6 @@ const About = () => {
             Choose your program, get certified, and open doors to lucrative
             career opportunities.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col justify-center sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
             <div>
               <CtaButton name={"Get Started"} />
@@ -135,30 +125,10 @@ const About = () => {
             >
               <VideoBtn name={"Watch Video"} />
             </div> */}
-=======
-          <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-          <div>
-            <CtaButton name={"Get Started"} />
-          </div>
-          <div onClick={()=> setShow(true)} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">
-            <VideoBtn name={"Watch Video"} />
-          </div>
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
           </div>
 
-          {/* Adding video */}
 
-<<<<<<< HEAD
-          {/* <div className={`${show ? "block" : "hidden"} absolute lg:w-full lg:h-full top-0 left-0 bg-zinc-500 bg-opacity-50 rounded overflow-hidden flex justify-center items-center shadow-2xl transition-all duration-300`}>
-        <div onClick={()=> clickHandler()} className="absolute right-10 top-6 text-3xl font-light bg-zinc-700 px-3 rounded-full text-white cursor-pointer">
-          x
-        </div>
-        <video id="video" muted controls autoPlay className="w-[800px] rounded" src={video}></video>
-      </div> */}
-
-
-=======
-          <div
+          {/* <div
             className={`${
               show ? "block" : "hidden"
             } absolute right-0 top-0 lg:w-full lg:h-full bg-zinc-500 bg-opacity-50 rounded overflow-hidden flex justify-center items-center shadow-2xl lg:mb-20 transition-all duration-300`}
@@ -177,8 +147,10 @@ const About = () => {
               className="w-[800px] rounded"
               src={video}
             ></video>
-          </div>
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
+          </div> */}
+
+
+
         </div>
       </div>
     </div>

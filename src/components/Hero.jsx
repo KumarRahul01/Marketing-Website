@@ -32,7 +32,6 @@ const Hero = () => {
 
   const [show, setShow] = useState(false);
 
-<<<<<<< HEAD
   const videoStartHandler = ()=>{
     const video = document.querySelector("#video");
     video.currentTime = 0;
@@ -43,10 +42,6 @@ const Hero = () => {
   const clickHandler = ()=>{
     const video = document.querySelector("#video");
     video.pause();
-=======
-  const clickHandler = ()=>{
-    const video = document.querySelector(".video");
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
     setShow(false);
   };
 
@@ -67,17 +62,10 @@ const Hero = () => {
           opportunities.
         </p>
         <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-<<<<<<< HEAD
           <a href="/Marketing-Website/dashboard" className="">
             <CtaButton name={"Get Started"} />
           </a>
           <div onClick={()=> videoStartHandler()} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">
-=======
-          <div className="">
-            <CtaButton name={"Get Started"} />
-          </div>
-          <div onClick={()=> setShow(true)} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
             <VideoBtn name={"Watch Video"} />
           </div>
         </div>

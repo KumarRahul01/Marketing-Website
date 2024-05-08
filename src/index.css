@@ -41,13 +41,3 @@ body::-webkit-scrollbar-thumb {
   content: "👉";
   padding-right: 5px;
 }
-<<<<<<< HEAD
-
-
-// Custom Links
-
-.prodImage:hover > .link{
-  display: block;
-}
-=======
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae

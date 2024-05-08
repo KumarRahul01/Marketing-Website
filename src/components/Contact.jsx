@@ -9,27 +9,16 @@ import "aos/dist/aos.css";
 
 // React Form
 import { useForm } from "react-hook-form";
-<<<<<<< HEAD
 import { toast } from "react-toastify";
-=======
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
 
 const Contact = () => {
   const { register, handleSubmit } = useForm();
 
-<<<<<<< HEAD
+
   const onSubmit = (data, e) => {
     console.log(data)
     toast.success("Message sent Successfully");
     e.target.reset();
-=======
-  const onSubmit = (data) => {
-    console.log(data),
-    name = "",
-    email = "",
-    subject = "",
-    message = ""
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
   };
 
   useEffect(() => {
@@ -124,18 +113,11 @@ const Contact = () => {
             <div className="md:flex gap-6">
               <div className="md:w-[50%]">
                 <div>
-<<<<<<< HEAD
                   <label htmlFor="name">Name</label>
                   <input
                     {...register("name", { required: true })}
                     type="text"
                     id="name"
-=======
-                  <h2>Name:</h2>
-                  <input
-                    {...register("name", { required: true })}
-                    type="text"
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
                     placeholder="John Doe"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
@@ -144,18 +126,11 @@ const Contact = () => {
 
               <div className="md:w-[50%]">
                 <div>
-<<<<<<< HEAD
                 <label htmlFor="email">Your Email</label>
                   <input
                     {...register("email", { required: true })}
                     type="email"
                     id="email"
-=======
-                  <h2>Your Email:</h2>
-                  <input
-                    {...register("email", { required: true })}
-                    type="text"
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
                     placeholder="johndoe@gmail.com"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
@@ -164,34 +139,21 @@ const Contact = () => {
             </div>
 
             <div>
-<<<<<<< HEAD
             <label htmlFor="subject">Subject</label>
               <input
                 {...register("subject", { required: true })}
                 type="text"
                 id="subject"
-=======
-              <h2>Subject</h2>
-              <input
-                {...register("subject", { required: true })}
-                type="text"
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
                 placeholder="Your subject"
                 className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
               />
             </div>
 
             <div>
-<<<<<<< HEAD
             <label htmlFor="message">Message</label>
               <textarea
                 {...register("message", { required: true })}
                 id="message"
-=======
-              <h2>Message</h2>
-              <textarea
-                {...register("message", { required: true })}
->>>>>>> 95afe5686c02adaf4f9be00ab371def65ee42bae
                 placeholder="Enter your message"
                 className="w-full h-60 p-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none resize-none"
               ></textarea>
