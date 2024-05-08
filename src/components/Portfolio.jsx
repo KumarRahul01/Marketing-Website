@@ -12,6 +12,7 @@ import book3 from "../img/portfolio/books-3.jpg";
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PortfolioProduct from "./PortfolioProduct";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -34,83 +35,29 @@ const Portfolio = () => {
       <div className="flex flex-col lg:-gap-6 gap-3 p-5">
         {/* 1st row */}
         <div data-aos="fade-right" className="flex lg:-gap-6 gap-3">
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={app1}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={app1} />
 
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={product1}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={product1} />
 
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={branding1}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={branding1} />
         </div>
 
         {/* 2nd row */}
         <div data-aos="fade-left" className="flex lg:-gap-6 gap-3">
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={book1}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={book1} />
 
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={app2}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={app2} />
 
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={book3}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={book3} />
         </div>
 
         {/* 3rd row */}
         <div data-aos="fade-up" className="flex lg:-gap-6 gap-3">
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={product3}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={product3} />
 
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={book2}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={book2} />
 
-          <div className="w-[26rem] overflow-hidden">
-            <img
-              src={app3}
-              className="w-fit h-fit object-cover transition-all duration-300 hover:opacity-60 hover:scale-110"
-              alt="phone"
-            />
-          </div>
+          <PortfolioProduct image={app3} />
         </div>
       </div>
     </div>

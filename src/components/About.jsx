@@ -20,12 +20,22 @@ const About = () => {
 
   const [show, setShow] = useState(false);
 
-  const clickHandler = () => {
+  const videoStartHandler = ()=>{
+    const video = document.querySelector("#video");
+    video.currentTime = 0;
+    video.load();
+    setShow(true);
+  }
+
+  const clickHandler = ()=>{
+    const video = document.querySelector("#video");
+    video.pause();
     setShow(false);
   };
 
+
   return (
-    <div className="relative">
+    <div className="relative lg:mx-32">
       <h1
         data-aos="fade-down"
         className="text-3xl font-semibold text-center text-[#7A6960]"
@@ -105,18 +115,20 @@ const About = () => {
             Choose your program, get certified, and open doors to lucrative
             career opportunities.
           </p>
-          <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-          <div>
-            <CtaButton name={"Get Started"} />
-          </div>
-          <div onClick={()=> setShow(true)} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">
-            <VideoBtn name={"Watch Video"} />
-          </div>
+          <div className="flex flex-col justify-center sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
+            <div>
+              <CtaButton name={"Get Started"} />
+            </div>
+            {/* <div
+              onClick={() => videoStartHandler()}
+              className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl"
+            >
+              <VideoBtn name={"Watch Video"} />
+            </div> */}
           </div>
 
-          {/* Adding video */}
 
-          <div
+          {/* <div
             className={`${
               show ? "block" : "hidden"
             } absolute right-0 top-0 lg:w-full lg:h-full bg-zinc-500 bg-opacity-50 rounded overflow-hidden flex justify-center items-center shadow-2xl lg:mb-20 transition-all duration-300`}
@@ -135,7 +147,10 @@ const About = () => {
               className="w-[800px] rounded"
               src={video}
             ></video>
-          </div>
+          </div> */}
+
+
+
         </div>
       </div>
     </div>

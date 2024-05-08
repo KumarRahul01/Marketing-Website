@@ -4,14 +4,24 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Newsletter = () => {
+// React Form
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
+const Newsletter = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200,
     });
   }, []);
 
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data, e) => {
+    console.log(data);
+    toast.success("You Subscribed our newsletter");
+    e.target.reset();
+  };
 
   return (
     <div data-aos="fade-down" className="text-[#7A6960]">
@@ -27,9 +37,19 @@ const Newsletter = () => {
       </p>
 
       {/* form */}
-      <form className="w-full flex flex-col md:flex-row justify-center items-center gap-3">
-        <input type="email" placeholder="email@gmail.com" className="md:w-1/2 w-11/12 px-6 py-3 rounded-3xl outline-none border border-zinc-300 focus:border-orange-600"/>
-        <button className="px-4 py-[10px] bg-orange-600 hover:bg-orange-500 rounded-3xl text-slate-50 text-lg hover:shadow hover:shadow-orange-500 transition-all duration-300">Subscribe</button>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full flex flex-col md:flex-row justify-center items-center gap-3"
+      >
+        <input
+          {...register("email", { required: true })}
+          type="email"
+          placeholder="email@gmail.com"
+          className="md:w-1/2 w-11/12 px-6 py-3 rounded-3xl outline-none border border-zinc-300 focus:border-orange-600"
+        />
+        <button className="px-4 py-[10px] bg-orange-600 hover:bg-orange-500 rounded-3xl text-slate-50 text-lg hover:shadow hover:shadow-orange-500 transition-all duration-300">
+          Subscribe
+        </button>
       </form>
     </div>
   );
