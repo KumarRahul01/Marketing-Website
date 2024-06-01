@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Card = ({ title, desc, img }) => {
-
-  const navigate = useNavigate();
+const Card = ({ title, desc, img, url }) => {
 
   const name = {title}
 
@@ -24,6 +22,7 @@ const Card = ({ title, desc, img }) => {
 
 
   return (
+    <a href={url}>
     <div className="bg-white lg:min-w-3/12 lg:min-h-[280px] h-fit p-10 shadow-md rounded mx-5 lg:m-0 hover:text-orange-600 lg:hover:-translate-y-5 transition-all duration-300 cursor-pointer"  onClick={()=> clickHandler(name)}>
       <div style={{ color: "#EA580C", fontSize: "36px" }}>
         {img}
@@ -37,6 +36,7 @@ const Card = ({ title, desc, img }) => {
 
 
     </div>
+    </a>
   );
 };
 

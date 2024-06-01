@@ -62,7 +62,7 @@ const Hero = () => {
           opportunities.
         </p>
         <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-          <a href="/Marketing-Website/dashboard" className="">
+          <a href="" className="">
             <CtaButton name={"Get Started"} />
           </a>
           <div onClick={()=> videoStartHandler()} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">
@@ -77,8 +77,8 @@ const Hero = () => {
 
       {/* Adding video */}
 
-      <div className={`${show ? "block" : "hidden"} absolute lg:w-full lg:h-full bg-zinc-500 bg-opacity-50 rounded overflow-hidden flex justify-center items-center shadow-2xl lg:mb-20 transition-all duration-300`}>
-        <div onClick={()=> clickHandler()} className="absolute right-10 top-6 text-3xl font-light bg-zinc-700 px-3 rounded-full text-white cursor-pointer">
+      <div className={`${show ? "block" : "hidden"} absolute lg:w-full lg:m-5 lg:h-full bg-zinc-500 bg-opacity-50 rounded overflow-hidden flex justify-center items-center shadow-2xl lg:mb-20 transition-all duration-300`}>
+        <div onClick={()=> clickHandler()} className="absolute lg:right-10 right-2 lg:top-6 top-2 lg:px-3 px-[0.6rem] rounded-s-full lg:text-3xl text-xl font-light bg-zinc-700 rounded-full text-white cursor-pointer">
           x
         </div>
         <video id="video" muted controls autoPlay className="w-[800px] rounded" src={video}></video>
