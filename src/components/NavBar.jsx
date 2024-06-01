@@ -58,12 +58,12 @@ const NavBar = () => {
       </div>
 
       {/* mobile menu */}
-      <div className="lg:hidden">
+      <div className="lg:hidden ">
         <RxHamburgerMenu size={"28px"} onClick={clickHandler} />
       </div>
 
       {show && (
-        <div className="absolute top-[70px] flex flex-col gap-4 text-center w-full left-0 p-5 lg:hidden shadow-xl">
+        <div className="absolute z-20 top-[70px] flex flex-col gap-4 text-center w-full left-0 p-5 lg:hidden shadow-xl bg-white transition-all duration-300">
           <a
             href="#"
             className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"

@@ -11,6 +11,9 @@ const Services = () => {
     AOS.init();
   });
 
+  const clickHandler = () => {
+    
+  };
   return (
     <div className="text-[#7A6960]">
       <h1 data-aos="fade-down" className="text-3xl font-semibold text-center">
@@ -27,6 +30,7 @@ const Services = () => {
         className="flex flex-col lg:flex-row items-center gap-5"
         data-aos="fade-up"
       >
+        <div onClick={()=> clickHandler()}>
           <Card
             img={<HiOutlineChartPie />}
             title={"Apps Development"}
@@ -34,6 +38,7 @@ const Services = () => {
               "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
             }
           />
+        </div>
 
         <Card
           img={<HiOutlineChartPie />}
