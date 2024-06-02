@@ -5,14 +5,18 @@ import { HiOutlineChartPie } from "react-icons/hi2";
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init();
   });
 
   const clickHandler = () => {
-    
+    navigate("/app-development");
   };
   return (
     <div className="text-[#7A6960]">
