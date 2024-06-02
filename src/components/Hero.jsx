@@ -10,7 +10,6 @@ import "aos/dist/aos.css";
 
 // import video
 import video from "../img/video/funny.mp4";
-import NavBar from "./NavBar";
 
 
 const Hero = () => {
