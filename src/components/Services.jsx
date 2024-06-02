@@ -8,16 +8,15 @@ import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
-
   const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init();
   });
 
-  const clickHandler = () => {
-    navigate("/app-development");
-  };
+  // const clickHandler = () => {
+  //   navigate("app-development");
+  // };
   return (
     <div className="text-[#7A6960]">
       <h1 data-aos="fade-down" className="text-3xl font-semibold text-center">
@@ -34,7 +33,7 @@ const Services = () => {
         className="flex flex-col lg:flex-row items-center gap-5"
         data-aos="fade-up"
       >
-        <div onClick={()=> clickHandler()}>
+        <div onClick={() => navigate("app-development")}>
           <Card
             img={<HiOutlineChartPie />}
             title={"Apps Development"}
@@ -44,29 +43,35 @@ const Services = () => {
           />
         </div>
 
-        <Card
-          img={<HiOutlineChartPie />}
-          title={"Web Development"}
-          desc={
-            "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
-          }
-        />
+        <div onClick={() => navigate("web-development")}>
+          <Card
+            img={<HiOutlineChartPie />}
+            title={"Web Development"}
+            desc={
+              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+            }
+          />
+        </div>
 
-        <Card
-          img={<HiOutlineChartPie />}
-          title={"Search Engine Optimization"}
-          desc={
-            "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
-          }
-        />
+        <div onClick={() => navigate("seo-optimization")}>
+          <Card
+            img={<HiOutlineChartPie />}
+            title={"Search Engine Optimization"}
+            desc={
+              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+            }
+          />
+        </div>
 
-        <Card
-          img={<HiOutlineChartPie />}
-          title={"Campaign Creation"}
-          desc={
-            "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
-          }
-        />
+        <div  onClick={() => navigate("campagin-creation")}>
+          <Card
+            img={<HiOutlineChartPie />}
+            title={"Campaign Creation"}
+            desc={
+              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+            }
+          />
+        </div>
       </div>
     </div>
   );

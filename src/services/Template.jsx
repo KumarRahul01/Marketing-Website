@@ -1,0 +1,49 @@
+import React from "react";
+import CtaButton from "../components/CtaButton";
+import { useNavigate } from "react-router-dom";
+
+const Template = ({ title, desc, image }) => {
+
+  const navigate = useNavigate();
+
+  return (
+    <div className="container min-w-full min-h-lvh secondary-font bg-[#FEFAF8]">
+      <section className="w-full min-h-screen md:pt-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
+        <div className="flex flex-col md:flex-row gap-10 justify-center items-center md:border md:shadow-xl rounded overflow-hidden md:p-16 p-10">
+          {/* Content */}
+          <div className="w-full md:w-1/2">
+            <h1 className="text-[#7A6960] md:text-5xl text-3xl font-semibold">
+              {title}
+            </h1>
+            <p className="text-xl mt-10 text-gray-600 primary-font">{desc}</p>
+
+            {/* CTA Button */}
+            {/* <div className="mt-10">
+              <a href="" className="">
+                <CtaButton name={"Get Started"} />
+              </a>
+            </div> */}
+
+            <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
+              <a href="" className="">
+                <CtaButton name={"Get Started"} />
+              </a>
+              <div
+                onClick={() => navigate(-1)}
+              >
+                <CtaButton name={"Contact Us"} />
+              </div>
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="w-full md:w-1/2">
+            <img src={image} alt="" />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Template;
