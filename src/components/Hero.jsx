@@ -61,7 +61,7 @@ const Hero = () => {
           opportunities.
         </p>
         <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-          <a href="" className="">
+          <a href="#contact" className="">
             <CtaButton name={"Get Started"} />
           </a>
           <div onClick={()=> videoStartHandler()} className="shadow shadow-zinc-300 hover:shadow-orange-600 hover:shadow px-4 py-2 rounded-3xl">

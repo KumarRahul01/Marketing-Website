@@ -13,6 +13,7 @@ import book3 from "../img/portfolio/books-3.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PortfolioProduct from "./PortfolioProduct";
+import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -20,6 +21,8 @@ const Portfolio = () => {
       duration: 2000,
     });
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="text-[#7A6960]">
@@ -32,32 +35,50 @@ const Portfolio = () => {
       </p>
 
       {/* Images */}
-      <div className="flex flex-col lg:-gap-6 gap-3 p-5">
+      <div className="flex flex-col justify-center items-center lg:-gap-6 gap-3 p-5 mb-10">
         {/* 1st row */}
-        <div data-aos="fade-right" className="flex lg:-gap-6 gap-3">
-          <PortfolioProduct image={app1} />
+        <div data-aos="fade-right" className="flex flex-col md:flex-row lg:-gap-6 gap-3">
+          <div onClick={() => navigate("portfolio/app1")}>
+            <PortfolioProduct image={app1} />
+          </div>
 
-          <PortfolioProduct image={product1} />
+          <div onClick={() => navigate("portfolio/product1")}>
+            <PortfolioProduct image={product1} />
+          </div>
 
-          <PortfolioProduct image={branding1} />
+          <div onClick={() => navigate("portfolio/brand1")}>
+            <PortfolioProduct image={branding1} />
+          </div>
         </div>
 
         {/* 2nd row */}
-        <div data-aos="fade-left" className="flex lg:-gap-6 gap-3">
-          <PortfolioProduct image={book1} />
+        <div data-aos="fade-left" className=" md:flex lg:-gap-6 gap-3 hidden">
+          <div onClick={() => navigate("portfolio/book1")}>
+            <PortfolioProduct image={book1} />
+          </div>
 
-          <PortfolioProduct image={app2} />
+          <div onClick={() => navigate("portfolio/app2")}>
+            <PortfolioProduct image={app2} />
+          </div>
 
-          <PortfolioProduct image={book3} />
+          <div onClick={() => navigate("portfolio/book3")}>
+            <PortfolioProduct image={book3} />
+          </div>
         </div>
 
         {/* 3rd row */}
-        <div data-aos="fade-up" className="flex lg:-gap-6 gap-3">
-          <PortfolioProduct image={product3} />
+        <div data-aos="fade-up" className="lg:-gap-6 gap-3 hidden md:flex">
+        <div onClick={() => navigate("portfolio/product3")}>
+            <PortfolioProduct image={product3} />
+          </div>
 
-          <PortfolioProduct image={book2} />
+          <div onClick={() => navigate("portfolio/book2")}>
+            <PortfolioProduct image={book2} />
+          </div>
 
-          <PortfolioProduct image={app3} />
+          <div onClick={() => navigate("portfolio/app3")}>
+            <PortfolioProduct image={app3} />
+          </div>
         </div>
       </div>
     </div>

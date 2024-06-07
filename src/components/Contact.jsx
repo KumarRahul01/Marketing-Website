@@ -14,9 +14,8 @@ import { toast } from "react-toastify";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
 
-
   const onSubmit = (data, e) => {
-    console.log(data)
+    console.log(data);
     toast.success("Message sent Successfully");
     e.target.reset();
   };
@@ -36,7 +35,7 @@ const Contact = () => {
         <div className="bg-orange-600 h-1 w-16 rounded"></div>
       </div>
       <p className="text-gray-700 text-center mt-7 mb-10 text-lg">
-        Explore our live offline centers | Fill the form to contact us
+        Reach out for a new project or just say hello
       </p>
 
       <div className="lg:flex gap-6">
@@ -96,7 +95,7 @@ const Contact = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d446503.2718980982!2d77.06293911143105!3d29.03750514663243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ced99fa1a5c27%3A0xaebefe90c0d9c8b5!2sDowntown%20Fitness%20GYM!5e0!3m2!1sen!2sin!4v1714676789211!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.76256980872!2d77.22260515427726!3d28.60905606083753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2db961be393%3A0xf6c7ef5ee6dd10ae!2sIndia%20Gate%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1717776828829!5m2!1sen!2sin"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -126,7 +125,7 @@ const Contact = () => {
 
               <div className="md:w-[50%]">
                 <div>
-                <label htmlFor="email">Your Email</label>
+                  <label htmlFor="email">Your Email</label>
                   <input
                     {...register("email", { required: true })}
                     type="email"
@@ -139,7 +138,7 @@ const Contact = () => {
             </div>
 
             <div>
-            <label htmlFor="subject">Subject</label>
+              <label htmlFor="subject">Subject</label>
               <input
                 {...register("subject", { required: true })}
                 type="text"
@@ -150,7 +149,7 @@ const Contact = () => {
             </div>
 
             <div>
-            <label htmlFor="message">Message</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 {...register("message", { required: true })}
                 id="message"

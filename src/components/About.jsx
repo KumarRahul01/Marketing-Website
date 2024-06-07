@@ -20,19 +20,18 @@ const About = () => {
 
   const [show, setShow] = useState(false);
 
-  const videoStartHandler = ()=>{
+  const videoStartHandler = () => {
     const video = document.querySelector("#video");
     video.currentTime = 0;
     video.load();
     setShow(true);
-  }
+  };
 
-  const clickHandler = ()=>{
+  const clickHandler = () => {
     const video = document.querySelector("#video");
     video.pause();
     setShow(false);
   };
-
 
   return (
     <div className="relative lg:mx-32">
@@ -117,7 +116,9 @@ const About = () => {
           </p>
           <div className="flex flex-col justify-center sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
             <div>
-              <CtaButton name={"Get Started"} />
+              <a href="/Marketing-Website/#contact" className="">
+                <CtaButton name={"Get Started"} />
+              </a>
             </div>
             {/* <div
               onClick={() => videoStartHandler()}
@@ -126,7 +127,6 @@ const About = () => {
               <VideoBtn name={"Watch Video"} />
             </div> */}
           </div>
-
 
           {/* <div
             className={`${
@@ -148,9 +148,6 @@ const About = () => {
               src={video}
             ></video>
           </div> */}
-
-
-
         </div>
       </div>
     </div>

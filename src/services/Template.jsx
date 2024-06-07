@@ -7,9 +7,9 @@ const Template = ({ title, desc, image }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="container min-w-full min-h-lvh secondary-font bg-[#FEFAF8]">
-      <section className="w-full min-h-screen md:pt-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
-        <div className="flex flex-col md:flex-row gap-10 justify-center items-center md:border md:shadow-xl rounded overflow-hidden md:p-16 p-10">
+    <div className="container min-w-full min-h-lvh secondary-font">
+      <section className="w-full min-h-screen md:pt-16 lg:px-32 overflow-hidden border-b border-orange-100">
+        <div className="flex flex-col md:flex-row gap-10 justify-center bg-[#FEFAF8] items-center md:border md:shadow-xl rounded overflow-hidden md:p-16 p-10">
           {/* Content */}
           <div className="w-full md:w-1/2">
             <h1 className="text-[#7A6960] md:text-5xl text-3xl font-semibold">
@@ -25,14 +25,14 @@ const Template = ({ title, desc, image }) => {
             </div> */}
 
             <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-              <a href="" className="">
-                <CtaButton name={"Get Started"} />
+              <a href="hire-us" className="">
+                <CtaButton name={"Hire Us"} />
               </a>
-              <div
+              {/* <div
                 onClick={() => navigate(-1)}
               >
                 <CtaButton name={"Contact Us"} />
-              </div>
+              </div> */}
             </div>
           </div>
 
