@@ -32,16 +32,8 @@ const Team = () => {
       </p>
 
       <div className="flex flex-col xs:flex-row gap-6 p-5 lg:p-0 items-center">
-        <TeamImage
-          image={team1}
-          name={"Walter White"}
-          role={"Cheif Executive Officer"}
-        />
-        <TeamImage
-          image={team2}
-          name={"Sarah Jhonson"}
-          role={"Product Manager"}
-        />
+        <TeamImage image={team1} name={"Walter White"} role={"Cheif Executive Officer"} />
+        <TeamImage image={team2} name={"Sarah Jhonson"} role={"Product Manager"} />
         <TeamImage image={team3} name={"William Anderson"} role={"CTO"} />
         <TeamImage image={team4} name={"Amanda Jepson"} role={"Accountant"} />
       </div>
