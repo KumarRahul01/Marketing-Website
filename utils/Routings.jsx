@@ -24,16 +24,16 @@ const Routings = () => {
       <Routes>
         <Route path="Marketing-Website/" element={<Home />} />
         <Route
-          path="Marketing-Website/app-development"
+          path="/app-development"
           element={<AppDevelopment />}
         />
         <Route
-          path="Marketing-Website/web-development"
+          path="/web-development"
           element={<WebDevelopment />}
         />
-        <Route path="Marketing-Website/seo-optimization" element={<Seo />} />
+        <Route path="/seo-optimization" element={<Seo />} />
         <Route
-          path="Marketing-Website/campagin-creation"
+          path="/campagin-creation"
           element={<Campaign />}
         />
         <Route path="Marketing-Website/hire-us" element={<Hireus />} />
