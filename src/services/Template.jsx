@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const Template = ({ title, desc, image }) => {
 
-  const navigate = useNavigate();
 
   return (
     <div className="container min-w-full min-h-lvh secondary-font">
