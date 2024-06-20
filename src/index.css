@@ -41,3 +41,18 @@ body::-webkit-scrollbar-thumb {
   content: "👉";
   padding-right: 5px;
 }
+
+.myLink{
+  position: relative;
+}
+
+.link{
+  display: none;
+}
+
+.myLink:hover > .link{
+  display: block;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}

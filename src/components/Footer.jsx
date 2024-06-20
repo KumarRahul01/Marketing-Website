@@ -6,6 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 
@@ -45,12 +46,12 @@ const Footer = () => {
             </a>
           </li>
           <li className="mb-2 arrow">
-            <a href="#" className="text-zinc-700">
+            <a href="#about" className="text-zinc-700">
               About Us
             </a>
           </li>
           <li className="mb-2 arrow">
-            <a href="#" className="text-zinc-700">
+            <a href="#services" className="text-zinc-700">
               Service
             </a>
           </li>
@@ -69,24 +70,24 @@ const Footer = () => {
         </h1>
         <ul>
           <li className="mb-2 arrow">
-            <a href="#" className="text-zinc-700">
-              Web Design
-            </a>
+            <Link to="app-development" className="text-zinc-700">
+              App Development
+            </Link>
           </li>
           <li className="mb-2 arrow">
-            <a href="#" className="text-zinc-700">
+          <Link to="web-development" className="text-zinc-700">
               Web Development
-            </a>
+            </Link>
           </li>
           <li className="mb-2 arrow">
-            <a href="#" className="text-zinc-700">
-              Product Management
-            </a>
+          <Link to="seo-optimization" className="text-zinc-700">
+          SEO Optimization
+            </Link>
           </li>
           <li className="mb-2 arrow">
-            <a href="#" className="text-zinc-700">
-              Marketing
-            </a>
+          <Link to="campagin-creation" className="text-zinc-700">
+          Campagin Creation
+            </Link>
           </li>
         </ul>
       </div>
