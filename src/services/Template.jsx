@@ -25,7 +25,7 @@ const Template = ({ title, desc, image }) => {
             </div> */}
 
             <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
-              <a href="hire-us" className="">
+              <a href="/hire-us" className="">
                 <CtaButton name={"Hire Us"} />
               </a>
               {/* <div
