@@ -59,7 +59,7 @@ const Appproducts = ({ img }) => {
               </p>
             </div>
             <div className="flex items-center justify-center mt-3">
-              <a href="/hire-us" className="">
+              <a href="/Marketing-Website/hire-us" className="">
                 <CtaButton name={"Hire Us"} />
               </a>
             </div>
