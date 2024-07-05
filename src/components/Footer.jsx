@@ -89,6 +89,11 @@ const Footer = () => {
           Campagin Creation
             </Link>
           </li>
+          <li className="mb-2 arrow">
+          <Link to="/hireus" className="text-zinc-700">
+          Hire Us
+            </Link>
+          </li>
         </ul>
       </div>
 

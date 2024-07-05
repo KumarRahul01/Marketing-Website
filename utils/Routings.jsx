@@ -36,7 +36,7 @@ const Routings = () => {
           path="/campagin-creation"
           element={<Campaign />}
         />
-        <Route path="/Marketing-Website/hireus" element={<Hireus />} />
+        <Route path="/hireus" element={<Hireus />} />
         <Route path="Marketing-Website/portfolio">
           <Route path="app1" element={<ProductsTemp img={app1} />} />
           <Route path="product1" element={<ProductsTemp img={product1} />} />

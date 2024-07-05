@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import CtaButton from "../components/CtaButton";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Appproducts = ({ img }) => {
   const navigate = useNavigate();
@@ -59,9 +59,9 @@ const Appproducts = ({ img }) => {
               </p>
             </div>
             <div className="flex items-center justify-center mt-3">
-              <a href="/Marketing-Website/hireus" className="">
+              <Link to="/hireus" className="">
                 <CtaButton name={"Hire Us"} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
