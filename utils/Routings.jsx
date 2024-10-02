@@ -22,7 +22,7 @@ const Routings = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Marketing-Website/" element={<Home />} />
         <Route
           path="/app-development"
           element={<AppDevelopment />}
@@ -37,7 +37,7 @@ const Routings = () => {
           element={<Campaign />}
         />
         <Route path="/hireus" element={<Hireus />} />
-        <Route path="/portfolio">
+        <Route path="Marketing-Website/portfolio">
           <Route path="app1" element={<ProductsTemp img={app1} />} />
           <Route path="product1" element={<ProductsTemp img={product1} />} />
           <Route path="brand1" element={<ProductsTemp img={branding1} />} />
