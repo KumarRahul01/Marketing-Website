@@ -63,7 +63,7 @@ const Services = () => {
           />
         </div>
 
-        <div  onClick={() => navigate("/campagin-creation")}>
+        <div onClick={() => navigate("/campagin-creation")}>
           <Card
             img={<HiOutlineChartPie />}
             title={"Campaign Creation"}

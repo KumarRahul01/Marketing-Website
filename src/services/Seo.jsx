@@ -18,12 +18,6 @@ const Seo = () => {
         }
         image={image}
       />
-            <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden bg-[#FEFAF8] border-b border-orange-100">
-        <Newsletter />
-      </section>
-      <section className="w-full max-h-fit py-16 lg:px-32 overflow-hidden border-b border-orange-100">
-        <Footer />
-      </section>
     </div>
   );
 };
