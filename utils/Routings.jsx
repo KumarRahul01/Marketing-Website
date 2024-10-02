@@ -23,19 +23,10 @@ const Routings = () => {
     <div>
       <Routes>
         <Route path="/Marketing-Website/" element={<Home />} />
-        <Route
-          path="/app-development"
-          element={<AppDevelopment />}
-        />
-        <Route
-          path="/web-development"
-          element={<WebDevelopment />}
-        />
+        <Route path="/app-development" element={<AppDevelopment />} />
+        <Route path="/web-development" element={<WebDevelopment />} />
         <Route path="/seo-optimization" element={<Seo />} />
-        <Route
-          path="/campagin-creation"
-          element={<Campaign />}
-        />
+        <Route path="/campagin-creation" element={<Campaign />} />
         <Route path="/hireus" element={<Hireus />} />
         <Route path="Marketing-Website/portfolio">
           <Route path="app1" element={<ProductsTemp img={app1} />} />
