@@ -33,7 +33,7 @@ Welcome to the Digital Marketing Website Template repository! This project is a 
 
 ## Installation
 
-To get a local copy up and running, follow these simple steps:
+To get a local copy up & running, follow these simple steps:
 
 1. **Clone the repository:**
    ```sh
